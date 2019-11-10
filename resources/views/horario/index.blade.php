@@ -8,7 +8,7 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
+
 </style>
 
 @extends('layouts.plantilla')
@@ -30,7 +30,7 @@
                         <br/>
                         <br/>
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover">
+                                <table class="table">
                                 
                                     <tr>
                                         <th>Curso</th><th>Paralelo</th><th>oferta</th><th>Modalidad</th><th>Accion</th>

@@ -8,7 +8,7 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
+
 </style>
 <?php
 if(isset($_REQUEST['accion']))
@@ -64,7 +64,7 @@ alert("Editado Satisfactoriamente");
                         <br/>
                         <br/>
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover">
+                                <table class="table">
                                 
                                     <tr>
                                         <th>#</th><th>Curso</th><th>Paralelo</th><th>Oferta</th><th>Modalidad</th><th>Accion</th>

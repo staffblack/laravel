@@ -1,15 +1,20 @@
 <style type="text/css">
-<!--
-.Estilo1 {font-weight: bold}
-.body {
-  color: #ffffff;
-}
-.Estilo4 {
-	color: #007bff;
-	font-weight: bold;
-}
--->
-</style>
+    <!--
+    .Estilo1 {font-weight: bold}
+    .body {
+      color: #ffffff;
+    }
+    .Estilo4 {
+        color: #007bff;
+        font-weight: bold;
+    }
+    table {
+      width:150px;
+      height:200px;
+      overflow-x:scroll;
+      overflow: visible;
+    }
+    </style>
 <?php
 if(isset($_REQUEST['accion']))
 {
@@ -72,8 +77,8 @@ if($accion=='editado'){
 
                         <br/>
                         <br/>
-                        
-                            <table class="table">
+                        <div class="table-responsive">
+                                <table class="table">
                                 
                                     <tr>
                                         <th>N</th><th>Cedula</th><th>Nombres</th><th>Telefono Representante</th><th>Accion</th>
@@ -97,18 +102,18 @@ if($accion=='editado'){
                                 @endforeach
                                 </tbody>
                             </table>
+                            <div class="col-lg-4">
+                                </div>
+                                <div class="col-lg-7">
+                                         {!! $estudiante->appends(['search' =>   Request::get('search')])->render() !!}
+                                </div>   
+                        </div>
                             <div class="col-lg-12">
                     
-                        <div class="col-lg-4">
-                    </div>
-                    <div class="col-lg-7">
-                         {!! $estudiante->appends(['search' =>   Request::get('search')])->render() !!}
-                    </div>
-                        
-                    <div class="col-lg-3">
-                    </div>
-                    </div>
-                            
-                        </div>
+                                
+            <div class="col-lg-3">
+        </div>
+    </div>
+</div>
 
 @endsection

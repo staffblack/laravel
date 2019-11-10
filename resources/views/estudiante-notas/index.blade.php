@@ -27,7 +27,7 @@
                         <br/>
                         <br/>
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover">
+                                <table class="table">
                                 <thead>
                                     <tr>
                                         <th>#</th><th>Id</th><th>Id Nivel</th><th>Id Materia</th><th>Actions</th>

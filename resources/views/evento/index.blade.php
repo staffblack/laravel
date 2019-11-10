@@ -41,7 +41,7 @@
                         <br/>
                         <br/>
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover">
+<table class="table">
                                 <thead>
                                     <tr>
                                         <th>#</th><th>Id</th><th>Nombre</th><th>Descripcion</th><th>Actions</th>

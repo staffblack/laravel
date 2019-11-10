@@ -12,12 +12,14 @@
 a {
     color: #c12c2c;
 }
--->
+
 </style>
 @extends('layouts.plantilla')
 @section('content')  
 <div class="col-lg-12 panel">
-    <table width="100%" border="0">
+  
+    <div class="table-responsive">
+        <table class="table">
       <tr>
         <td class="Estilo30">
             <a href="nivel_estudiantes" class="btn btn-primary">Nivel Estudiantes </a>  {{$descripcion_nivel}}</td>
@@ -97,4 +99,5 @@ a {
       </tr>
     </table>
   </div>
+</div>
 @endsection

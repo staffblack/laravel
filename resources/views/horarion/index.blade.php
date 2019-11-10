@@ -1,16 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.plantilla')
 
 @section('content')
     <div class="container">
         <div class="row">
-            @include('admin.sidebar')
 
-            <div class="col-md-9">
+
+            <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Horarion</div>
+                    <div class="card-header">Horario</div>
                     <div class="card-body">
                         <a href="{{ url('/horarion/create') }}" class="btn btn-success btn-sm" title="Add New Horarion">
-                            <i class="fa fa-plus" aria-hidden="true"></i> Add New
+                            <i class="fa fa-plus" aria-hidden="true"></i> Agregar
                         </a>
 
                         <form method="GET" action="{{ url('/horarion') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
@@ -27,12 +27,10 @@
                         <br/>
                         <br/>
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover">
-                                <thead>
+                                <table class="table">
                                     <tr>
                                         <th>#</th><th>Id</th><th>Cedula Docente</th><th>Id Nivel</th><th>Actions</th>
                                     </tr>
-                                </thead>
                                 <tbody>
                                 @foreach($horarion as $item)
                                     <tr>

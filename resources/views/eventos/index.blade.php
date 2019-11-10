@@ -8,8 +8,8 @@
     <body>
         
 		<h1 class="text-primary">Lista de Eventos</h1>
-
-<table class="table table-bordered" id="tableMonedas">
+    <div class="table-responsive">
+        <table class="table">
   <thead>
     <tr>
         <th class="text-center">Id evento</th>
@@ -44,7 +44,7 @@
     </tr>
   </tfoot>
 </table>
-		
+    </div>
 		
 		
 		

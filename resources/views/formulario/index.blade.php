@@ -8,7 +8,6 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
 </style>
 <?php
 if(isset($_REQUEST['accion']))
@@ -60,17 +59,17 @@ alert("Editado Satisfactoriamente");
                         <br/>
                         <br/>
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover">
+                                <table class="table">
                                 
                                     <tr>
-                                        <th>#</th><th>Id</th><th>Nombre</th><th>Actions</th>
+                                        <th>#</th><th>Nombre</th><th>Actions</th>
                                     </tr>
                                 <tbody>
                                 @foreach($formulario as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->id }}</td><td>{{ $item->nombre }}</td>
-                                        <td>
+                                        <td>{{ $item->nombre }}</td>
+                                        <td width="20">
                                             <a href="{{ url('/formulario/' . $item->id) }}" title="View Formulario"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Ver</button></a>
                                             <a href="{{ url('/formulario/' . $item->id . '/edit') }}" title="Edit Formulario"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
 

@@ -1,29 +1,23 @@
 <style>
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
+  width:150px;
+  height:200px;
+  overflow-x:scroll;
+  overflow: visible;
 }
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even){background-color: #f2f2f2}
 </style>
 <?php
 $page='cronograma1';
 ?>
 
 <div class="container">
-    <div class="row ">
+  <div class="row ">
     @extends('plantilla')
     @section('content')
     <div class="col-sm-8 panel">
         
-    <div class="col-sm-9 panel" >
+    <div class="col-sm-12 panel" >
         <div class="col-sm-4 panel">
             &nbsp;
         </div>
@@ -38,18 +32,18 @@ $page='cronograma1';
                     </a>
             </div>
         <div class="col-sm-4 panel">
-            &nbsp;
+          
         </div>
             
-      <div class="col-sm-12 panel">
+      <div class="col-sm-12 panel " >
+          <div style="overflow-x:auto;">
         <div class="module mod-line  deepest" style="min-height: 5px;">
           <div align="center"><span class="Estilo34">
               <span class="text-center Estilo20 Estilo16">Actividades mes de   {{$nombre_mes}} {{$ano}}</span></span> 
           </div>
         </div>
-      </div>
-      <div style="overflow-x:auto;">
-            <table class="table" width="20%">
+      
+     <table class="table">
               <tr>
 			         <td >
                   <div align="center"><strong> L </strong></div>
@@ -142,7 +136,7 @@ $page='cronograma1';
 			       @endif
             @endfor 
           </table>
-
+        </div>
         </div>
         </div>
         
@@ -169,6 +163,7 @@ $page='cronograma1';
             @endforeach
         
       </div>
-</div>  
+  </div>  
+</div>
  @endsection
  

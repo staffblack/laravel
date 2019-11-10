@@ -22,8 +22,8 @@
         <h3>Lista de Estudiantes</h3><a href="{{ route('estudiantes.create') }}" class="btn btn-info" >Añadir Estudiante</a>
     </div>
           
-    <div class="col-lg-12">
-            <table class="table table-striped table-bordered table-hover" width="100%">
+    <div class="table-responsive">
+<table class="table">
              <thead>
                <th>Nombres</th>
                <th>Apellidos</th>

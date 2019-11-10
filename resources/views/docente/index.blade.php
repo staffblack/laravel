@@ -1,32 +1,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even){background-color: #f2f2f2}
-</style>
-
 <style type="text/css">
-<!--
-.Estilo1 {font-weight: bold}
-.body {
-  color: #ffffff;
-}
-.Estilo4 {
-    color: #007bff;
-    font-weight: bold;
-}
--->
-</style>
+    <!--
+    .Estilo1 {font-weight: bold}
+    .body {
+      color: #ffffff;
+    }
+    .Estilo4 {
+        color: #007bff;
+        font-weight: bold;
+    }
+    table {
+      width:150px;
+      height:200px;
+      overflow-x:scroll;
+      overflow: visible;
+    }
+    </style>
 <?php
 if(isset($_REQUEST['accion']))
 {
@@ -91,7 +80,8 @@ alert("Editado Satisfactoriamente");
                         <br/>
                         
 
-                            <table class="table">
+                        <div class="table-responsive">
+                                <table class="table">
                                 
                                     <tr>
                                         <td>#</td><td>Cedula</td><td>Nombre</td><td>Apellido</td><td>Foto</td><td>Accción</td>
@@ -116,11 +106,13 @@ alert("Editado Satisfactoriamente");
                                 
                             </table>
                             <div class="col-lg-3">
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="pagination-wrapper"> {!! $docente->appends(['search' => Request::get('search')])->render() !!} 
                                 </div>
-                            </div>
+                                <div class="col-lg-3">
+                                    <div class="pagination-wrapper"> {!! $docente->appends(['search' => Request::get('search')])->render() !!} 
+                                    </div>
+                                </div>
+                        </div>
+                            
                         </div>
 
             </div>

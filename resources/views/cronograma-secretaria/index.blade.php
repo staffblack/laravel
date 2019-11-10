@@ -1,15 +1,20 @@
 <style type="text/css">
-<!--
-.Estilo1 {font-weight: bold}
-.body {
-  color: #ffffff;
-}
-.Estilo4 {
-	color: #007bff;
-	font-weight: bold;
-}
--->
-</style>
+
+    .Estilo1 {font-weight: bold}
+    .body {
+      color: #ffffff;
+    }
+    .Estilo4 {
+        color: #007bff;
+        font-weight: bold;
+    }
+    table {
+      width:150px;
+      height:200px;
+      overflow-x:scroll;
+      overflow: visible;
+    }
+    </style>
 <?php
 if(isset($_REQUEST['accion']))
 {
@@ -72,7 +77,7 @@ alert("Editado Satisfactoriamente");
                         <br/>
                         <br/>
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover">
+                            <table class="table">
                                
                                     <tr>
                                         <th>#</th><th>Fecha</th><th>Nombre</th><th>Foto</th><th>Opciones</th>

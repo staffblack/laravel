@@ -8,7 +8,7 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
+
 </style>
 <?php
 if(isset($mensaje))
@@ -51,7 +51,8 @@ alert("Horario Editado Satisfactoriamente");
 @extends('layouts.plantilla')
 @section('content')
     <div class="col-lg-12 panel">
-        <table width="100%" border="0">
+        <div class="table-responsive">
+            <table class="table">
             <tr>
                 <td class="Estilo30"><a href="javascript:history.back()" class="btn btn-primary"> Volver Atrás</a>&nbsp;&nbsp;&nbsp;<span class="Estilo16">{{$descripcion_nivel}}</span></td>
             </tr>
@@ -341,4 +342,5 @@ alert("Horario Editado Satisfactoriamente");
       </tr>
     </table>
   </div>
+</div>
 @endsection
