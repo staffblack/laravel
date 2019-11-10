@@ -8,7 +8,6 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
 </style>
 
 @extends('layouts.plantilla')
@@ -31,9 +30,6 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>
-                                    <tr>
-                                        <th> Id </th><td> {{ $usuario->id }} </td>
-                                    </tr>
                                     
                                     <tr>
                                         <th> Login </th><td> {{ $usuario->login }} </td>

@@ -1,5 +1,5 @@
 <style type="text/css">
-
+    <!--
     .Estilo1 {font-weight: bold}
     .body {
       color: #ffffff;
@@ -43,15 +43,11 @@ alert("Editado Satisfactoriamente");
 }
 ?>
 @extends('layouts.plantilla')
-<div class="container">
-    <div class="row">
 @section('content')
-    &nbsp;&nbsp;
     
-            <div class="col-lg-10">
-                <div class="card">
+            <div class="col-lg-12">
                     <div class="card-header">Cronograma</div>
-                    <div class="card-body">
+                    
                        <div class="col-lg-4">
                             </div>
                             <div class="col-lg-3">
@@ -114,8 +110,6 @@ alert("Editado Satisfactoriamente");
                             </div>
                             </div>
                     </div>
-                </div>
-            </div>
         </div>
     </div>
 @endsection

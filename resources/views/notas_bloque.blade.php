@@ -70,7 +70,19 @@ alert("A iniciado la session Satisfactoriamente");
                        if(isset($_REQUEST['paralelo']))
                                 {
                                     echo 'Curso: '.$_REQUEST['curso'].' '.$_REQUEST['paralelo'];
+                                    $nivel=$_REQUEST['nivel'];
                                 }
+                                else{
+                                    $nivel="";
+                                }
+                        include '../conexion3.php';
+                        $tutor=mysqli_query($conexion,"select * from tutor_nivel AS tn INNER JOIN docente AS do ON tn.cedula_docente=do.cedula  WHERE tn.id_nivel='$nivel' ") or
+                               die("Problemas en el select:".mysqli_error($conexion));
+
+                            if ($tn=mysqli_fetch_array($tutor))
+                            {
+                                echo '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tutor(a):'.$tn['nombres'].' '.$tn['apellidos'];
+                            }
                        ?>
                        </h3>
                     </div>
@@ -153,11 +165,20 @@ alert("A iniciado la session Satisfactoriamente");
                             while ($reg=mysqli_fetch_array($hora))
                             {
 
-
+                                //condicional para bachillerato internacional
+                                if(($nivel==34)or($nivel==37))
+                                {
+                                    echo 'Mostrar'.$nivel;
+                                }
+                                else{
+                                    echo 'Ocultar'.$nivel;
+                                }
                                       ?>
                                     <tr >
         <td class="success"><?php echo $reg['hora_inicio'].' - '.$reg['hora_fin'];?></td>
+        <?php 
         
+        ?>
         <td class="active">
         <?php
         $horaid=$reg['id'];
@@ -180,6 +201,12 @@ alert("A iniciado la session Satisfactoriamente");
                     }
                     
                     if($reg['id']==14){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+                    if($reg['id']==19){
                         echo 'Recreo';
                     }
                     else{
@@ -215,6 +242,12 @@ alert("A iniciado la session Satisfactoriamente");
                     else{
                         
                     }
+                    if($reg['id']==19){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
         ?>
         </td>
         <td class="active">
@@ -239,6 +272,12 @@ alert("A iniciado la session Satisfactoriamente");
                     }
                     
                     if($reg['id']==14){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+                    if($reg['id']==19){
                         echo 'Recreo';
                     }
                     else{
@@ -272,6 +311,12 @@ alert("A iniciado la session Satisfactoriamente");
                     else{
                         
                     }
+                    if($reg['id']==19){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
         ?>
         </td>
         <td class="active">
@@ -296,6 +341,12 @@ alert("A iniciado la session Satisfactoriamente");
                     }
                     
                     if($reg['id']==14){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+                    if($reg['id']==19){
                         echo 'Recreo';
                     }
                     else{

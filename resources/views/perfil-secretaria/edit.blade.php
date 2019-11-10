@@ -8,7 +8,6 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
 </style>
 <?php
 if(isset($_REQUEST['accion']))
@@ -45,9 +44,8 @@ alert("Editado Satisfactoriamente");
 @section('content')
 
             <div class="col-md-12">
-                <div class="card">
                     <div class="card-header">Editar  Perfil</div>
-                    <div class="card-body">
+                    
                         
                         <br />
                         <br />
@@ -68,9 +66,5 @@ alert("Editado Satisfactoriamente");
 
                         </form>
 
-                    </div>
-                </div>
             </div>
-        </div>
-    </div>
 @endsection

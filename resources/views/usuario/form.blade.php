@@ -21,7 +21,7 @@
 </div>
 <div class="form-group {{ $errors->has('perfil') ? 'has-error' : ''}}">
     <label for="perfil" class="control-label">{{ 'Perfil' }}</label>
-    <select name="perfil" class="form-control" id="perfil" >
+    <select name="perfil" class="form-control" id="perfil"  style="font-size:12px">
     @foreach (json_decode('{"Administrador":"Administrador","Secretaria":"Secretaria","Docente":"Docente","Representante":"Representante"}', true) as $optionKey => $optionValue)
         <option value="{{ $optionKey }}" {{ (isset($usuario->perfil) && $usuario->perfil == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
     @endforeach

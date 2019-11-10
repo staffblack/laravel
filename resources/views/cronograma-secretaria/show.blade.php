@@ -8,7 +8,6 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
 </style>
 <?php
 if(isset($_REQUEST['accion']))
@@ -38,23 +37,18 @@ alert("Editado Satisfactoriamente");
 }
 ?>
 @extends('layouts.plantilla')
-<div class="container">
-    <div class="row">
 @section('content')
-    &nbsp;&nbsp;
     
-            <div class="col-lg-10 panel panel-default">
-                <div class="card">
-                    <div class="card-header">CronogramaSecretarium {{ $cronogramasecretarium->id }}</div>
-                    <div class="card-body">
+            <div class="col-lg-12 panel">
+                    <div class="card-header">Cronograma</div>
 
-                        <a href="{{ url('/cronograma-secretaria') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
-                        <a href="{{ url('/cronograma-secretaria/' . $cronogramasecretarium->id . '/edit') }}" title="Edit CronogramaSecretarium"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                        <a href="{{ url('/cronograma-secretaria') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</button></a>
+                        <a href="{{ url('/cronograma-secretaria/' . $cronogramasecretarium->id . '/edit') }}" title="Edit CronogramaSecretarium"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>
 
                         <form method="POST" action="{{ url('cronogramasecretaria' . '/' . $cronogramasecretarium->id) }}" accept-charset="UTF-8" style="display:inline">
                             {{ method_field('DELETE') }}
                             {{ csrf_field() }}
-                            <button type="submit" class="btn btn-danger btn-sm" title="Delete CronogramaSecretarium" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                            <button type="submit" class="btn btn-danger btn-sm" title="Delete CronogramaSecretarium" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</button>
                         </form>
                         <br/>
                         <br/>

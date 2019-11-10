@@ -107,6 +107,12 @@ tr:nth-child(even){background-color: #f2f2f2}
         </style>
 
         <script type="text/javascript">
+
+        function deshabilitaRetroceso(){
+    window.location.hash="no-back-button";
+    window.location.hash="Again-No-back-button" //chrome
+    window.onhashchange=function(){window.location.hash="no-back-button";}
+}
           $( document ).ready(function( $ ) {
             $( '#example5' ).sliderPro({
               width: 490,

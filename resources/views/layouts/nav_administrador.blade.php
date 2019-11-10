@@ -447,6 +447,7 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
             <h5 id="heading">
                 Usuario:<br>
                 {{session('login')}}<br>
+                {{session('nombres_usuario')}}<br>
                 Nivel:<br>
                 ADMINISTRADOR<br>
                 

@@ -8,19 +8,16 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
+
 </style>
 
 @extends('layouts.plantilla')
-<div class="container">
-    <div class="row">
 @section('content')
     
     
-            <div class="col-lg-9 panel">&nbsp;
-                <div class="card">&nbsp;
+            <div class="col-lg-12 panel">&nbsp;
+               
                     <div class="card-header">Crear</div>
-                    <div class="card-body">
                         <br />
                         <br />
 

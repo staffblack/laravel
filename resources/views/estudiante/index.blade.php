@@ -81,13 +81,13 @@ if($accion=='editado'){
                                 <table class="table">
                                 
                                     <tr>
-                                        <th>N</th><th>Cedula</th><th>Nombres</th><th>Telefono Representante</th><th>Accion</th>
+                                        <th>N</th><th>Cedula</th><th>Nombres</th><th>Apellidos</th><th>Telefono Representante</th><th>Accion</th>
                                     </tr>
                                 <tbody>
                                 @foreach($estudiante as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->cedula }}</td><td>{{ $item->nombres }}</td><td>{{ $item->telefono_representante }}</td>
+                                        <td>{{ $item->cedula }}</td><td>{{ $item->nombres }}</td><td>{{ $item->apellidos }}</td><td>{{ $item->telefono_representante }}</td>
                                         <td>
                                             <a href="{{ url('/estudiante/' . $item->id) }}" title="Ver Estudiante"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i> Ver</button></a>
                                             <a href="{{ url('/estudiante/' . $item->id . '/edit') }}" title="Edit Estudiante"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Editar</button></a>

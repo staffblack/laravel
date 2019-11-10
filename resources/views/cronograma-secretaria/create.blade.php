@@ -8,7 +8,7 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
+
 </style>
 <?php
 if(isset($_REQUEST['accion']))
@@ -38,16 +38,12 @@ alert("Editado Satisfactoriamente");
 }
 ?>
 @extends('layouts.plantilla')
-<div class="container">
-    <div class="row">
 @section('content')
     &nbsp;&nbsp;
     
-            <div class="col-lg-10">
-                <div class="card">
+            <div class="col-lg-12">
                     <div class="card-header">Crear nuevo</div>
-                    <div class="card-body">
-                        <a href="{{ url('/cronograma-secretaria') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></a>
+                        <a href="{{ url('/cronograma-secretaria') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</button></a>
                         <br />
                         <br />
 

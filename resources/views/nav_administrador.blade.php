@@ -432,9 +432,9 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
         
         <div class="panel-heading">
             <h5 id="heading">
-                Usuario:<br>
+                
+                {{session('nombres_usuario')}}&nbsp;{{session('apellidos_usuario')}}<br>
                 {{session('login')}}<br>
-                Nivel:<br>
                 ADMINISTRADOR<br>
                 
                 
@@ -499,7 +499,7 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
         <div class="panel-heading">
             <h5 id="heading">
                 {{session('nombres_usuario').'  '.session('apellidos_usuario')}}<br>
-                {{session('email_usuario')}}<br>
+                {{session('login')}}<br>
                 {{session('perfil')}}<br>
                 
                 
@@ -566,12 +566,10 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
         
         <div class="panel-heading">
             <h5 id="heading">
-                Usuario:<br>
+                
+                {{session('nombres_usuario').'  '.session('apellidos_usuario')}}<br>
                 {{session('login')}}<br>
-                Nivel:<br>
                 {{session('perfil')}}<br>
-                
-                
             </h5>
         </div>
   <br>
@@ -616,9 +614,8 @@ if(($page=="usuario_secretaria")or($page=="Secretaria"))
 				
 <div class="panel-heading">
             <h5 id="heading">
-                Usuario:<br>
+                {{session('nombres_usuario').'  '.session('apellidos_usuario')}}<br>
                 {{session('login')}}<br>
-                Nivel:<br>
                 {{session('perfil')}}<br>
                 
                 

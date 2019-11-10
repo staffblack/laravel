@@ -1,6 +1,6 @@
 <div class="form-group {{ $errors->has('nombres') ? 'has-error' : ''}}">
     <label for="nombres" class="control-label">{{ 'Nombres' }}</label>
-    <textarea class="form-control" rows="1" name="nombres" type="text" id="nombres" required="true" >{{ isset($perfilsecretarium->nombres) ? $perfilsecretarium->nombres : ''}}</textarea>
+    <input class="form-control" name="nombres" type="text" id="nombres" required="true" value="{{ isset($perfilsecretarium->nombres) ? $perfilsecretarium->nombres : ''}}">
     {!! $errors->first('nombres', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('apellidos') ? 'has-error' : ''}}">
@@ -10,7 +10,7 @@
 </div>
 <div class="form-group {{ $errors->has('login') ? 'has-error' : ''}}">
     <label for="login" class="control-label">{{ 'Login' }}</label>
-    <textarea class="form-control" rows="1" name="login" type="textarea" id="login" required="true">{{ isset($perfilsecretarium->login) ? $perfilsecretarium->login : ''}}</textarea>
+    <input class="form-control" name="login" type="text" id="login" required="true" value="{{ isset($perfilsecretarium->login) ? $perfilsecretarium->login : ''}}">
     {!! $errors->first('login', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('password') ? 'has-error' : ''}}">
