@@ -1,0 +1,46 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "type": "number"
+        },
+        {
+            "name": "id_nivel",
+            "type": "number"
+        },
+        {
+            "name": "id_materia",
+            "type": "number"
+        },
+        {
+            "name": "cedula_docente",
+            "type": "number"
+        },
+        {
+            "name": "cedula_estudiante",
+            "type": "number"
+        },
+        {
+            "name": "id_bloque",
+            "type": "number"
+        },
+        {
+            "name": "nota",
+            "type": "text"
+        },
+        {
+            "name": "alcance",
+            "type": "text"
+        }
+        
+    ],
+    "foreign_keys": [
+        {
+            "column": "id",
+            "references": "id",
+            "on": "users",
+            "onDelete": "cascade"
+        }
+    
+    ]
+}

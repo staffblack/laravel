@@ -1,0 +1,42 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "type": "number"
+        },
+        {
+            "name": "fecha",
+            "type": "date"
+        },
+        {
+            "name": "hora",
+            "type": "time"
+        },        
+        {
+            "name": "tipo",
+            "type": "select",
+            "options": {
+                "Noticia": "Noticia",
+                "Evento": "Evento",
+                "Actividad": "Actividad"
+            }
+        },
+        {
+            "name": "nombre",
+            "type": "text"
+        },
+        {
+            "name": "descripcion",
+            "type": "text"
+        },
+        {
+            "name": "responsable",
+            "type": "text"
+        },
+        {
+            "name": "foto",
+            "type": "file"
+        }
+        
+    ]
+}

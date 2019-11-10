@@ -1,0 +1,38 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "type": "number"
+        },
+        {
+            "name": "cedula",
+            "type": "number"
+        },
+        {
+            "name": "nombres",
+            "type": "text"
+        },
+        {
+            "name": "apellidos",
+            "type": "text"
+        },
+        {
+            "name": "password",
+            "type": "password"
+        },
+        {
+            "name": "foto",
+            "type": "file"
+        }
+        
+    ],
+    "foreign_keys": [
+        {
+            "column": "id",
+            "references": "id",
+            "on": "users",
+            "onDelete": "cascade"
+        }
+    
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "type": "number"
+        },
+        {
+            "name": "login",
+            "type": "text"
+        },
+        {
+            "name": "password",
+            "type": "password"
+        },
+        {
+            "name": "nombres",
+            "type": "text"
+        },
+        {
+            "name": "apellidos",
+            "type": "email"
+        },
+        {
+            "name": "perfil",
+            "type": "select",
+            "options": {
+                "Secretaria": "Secretaria"
+            }
+        }
+        
+    ],
+    "foreign_keys": [
+        {
+            "column": "id",
+            "references": "id",
+            "on": "users",
+            "onDelete": "cascade"
+        }
+    
+    ]
+}

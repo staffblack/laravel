@@ -1,0 +1,58 @@
+{
+    "fields": [
+        {
+            "name": "cedula",
+            "type": "string#unsigned"
+        },
+        {
+            "name": "grado",
+            "type": "string"
+        },
+        {
+            "name": "nombres",
+            "type": "string"
+        },
+        {
+            "name": "apellidos",
+            "type": "string}"
+        },
+        {
+            "name": "email",
+            "type": "email"
+        },
+        {
+            "name": "telefono",
+            "type": "number"
+        },
+        {
+            "name": "cargo",
+            "type": "text"
+        },
+        {
+            "name": "area",
+            "type": "text"
+        },
+        {
+            "name": "password",
+            "type": "password"
+        },
+        {
+            "name": "foto",
+            "type": "file"
+        },
+        {
+            "name": "apellidos",
+            "type": "email"
+        }
+        
+    ],
+    "foreign_keys": [
+        {
+            "column": "cedula",
+            "references": "cedula",
+            "on": "docente",
+            "onDelete": "cascade"
+        }
+    
+    ]
+}

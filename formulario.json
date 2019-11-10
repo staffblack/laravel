@@ -1,0 +1,21 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "type": "number"
+        },
+        {
+            "name": "nombre",
+            "type": "text"
+        },
+        {
+            "name": "descripcion",
+            "type": "text"
+        },
+        {
+            "name": "documento",
+            "type": "file"
+        }
+        
+    ]
+}

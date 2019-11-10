@@ -1,0 +1,32 @@
+{
+    "fields": [
+        {
+            "name": "cedula",
+            "type": "string"
+        },
+        {
+            "name": "nombres",
+            "type": "string"
+        },
+        {
+            "name": "apellidos",
+            "type": "string"
+        },
+        {
+            "name": "telefono",
+            "type": "string"
+        },
+        {
+            "name": "password",
+            "type": "string"
+        },
+        {
+            "name": "foto",
+            "type": "file"
+        },
+        {
+            "name": "grado",
+            "type": "string"
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "fields": [
+        {
+            "name": "id",
+            "type": "number"
+        },
+        {
+            "name": "curso",
+            "type": "text"
+        },
+        {
+            "name": "paralelo",
+            "type": "text"
+        },
+        {
+            "name": "oferta",
+            "type": "text"
+        },
+        {
+            "name": "modalidad",
+            "type": "text"
+        }
+        
+    ]
+}

@@ -1,0 +1,447 @@
+<?php
+$page='notas_bloque';
+include '../conexion3.php';
+?>
+<style type="text/css">
+<!--
+.Estilo2 {color: #FF0000}
+.Estilo3 {color: #000000}
+.Estilo4 {font-size: 12px}
+.Estilo5 {font-size: 12}
+.Estilo7 {font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+.Estilo8 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<?php
+if(isset($_REQUEST['accion']))
+{
+    $accion=$_REQUEST['accion'];
+}
+else
+{
+    $accion='';
+}
+
+if($accion=='inicio'){
+   ?>
+<script>
+alert("A iniciado la session Satisfactoriamente");
+</script> 
+ <?php
+    
+    
+}
+?>
+
+<div class="container">
+    <div class="row">
+@extends('plantilla')
+@section('content')
+<div class="col-md-12">
+    <?php //col-md-3 lin 56?>
+
+
+
+
+
+<div class="col-md-12 panel"><?php //col-md-12 lin 55?>
+    <div class="container">
+               
+                    <div class="col-sm-12">
+                       <h3><?php
+                       if(isset($_REQUEST['paralelo']))
+                                {
+                                    echo 'Curso: '.$_REQUEST['curso'].' '.$_REQUEST['paralelo'];
+                                }
+                       ?>
+                       </h3>
+                    </div>
+                    <table class="table">
+                    </table>
+                    <div style="overflow-x:auto;">
+                    
+                        <table class="table">
+                            <thead>
+                                <?php
+                                
+                                if(isset($_REQUEST['curso']))
+                                {
+                                    $var_curso=1;
+                                }
+                                else{
+                                    $var_curso=0;
+                                }
+                                if(isset($_REQUEST['paralelo']))
+                                {
+                                    $var_paralelo=1;
+                                }
+                                else{
+                                    $var_paralelo=0;
+                                }
+                                if(isset($_REQUEST['modalidad']))
+                                    {
+                                        $modalidad=$_REQUEST['modalidad'];
+                                    }
+                                    else
+                                    {
+                                        $modalidad='Bachillerato General Unificado';
+                                    }
+                                    if(($var_curso==1)&&($var_paralelo==1) ){
+                                       ?>
+                                        <table class="table">
+                            <thead>
+                                <?php
+                                if(isset($_REQUEST['modalidad']))
+                                    {
+                                        $modalidad=$_REQUEST['modalidad'];
+                                    }
+                                    else
+                                    {
+                                        $modalidad='Bachillerato General Unificado';
+                                    }
+                                    if(isset($_REQUEST['modalidad'])){
+                                       ?>
+                                        <tr>
+                                <th WIDTH="25%"></th>
+                                <th WIDTH="15%">Lunes</th>
+                                <th WIDTH="15%">Martes</th>
+                                <th WIDTH="15%">Miercoles</th>
+                                <th WIDTH="15%">Jueves</th>
+                                <th WIDTH="15%">Viernes</th>
+                              </tr>
+                                     <?php
+                                        
+                                    }
+                                    else{
+                                        ?>
+                              <div class="panel-group" id="accordion">
+                        
+                        
+                    </div>
+                                        <?php
+                                        
+                                    }
+                                ?>
+                              
+                            </thead>
+                                <tbody>
+
+                                    <?php
+                                    
+                                       include '../conexion3.php';
+                                      $hora=mysqli_query($conexion,"select * from hora WHERE modalidad='$modalidad' ") or
+                               die("Problemas en el select:".mysqli_error($conexion));
+
+                            while ($reg=mysqli_fetch_array($hora))
+                            {
+
+
+                                      ?>
+                                    <tr >
+        <td class="success"><?php echo $reg['hora_inicio'].' - '.$reg['hora_fin'];?></td>
+        
+        <td class="active">
+        <?php
+        $horaid=$reg['id'];
+        $dia=1;
+        $horario=mysqli_query($conexion,"SELECT * FROM horario AS ho INNER JOIN materia AS ma ON ho.id_materia=ma.id INNER JOIN docente AS do ON ho.cedula_docente=do.cedula WHERE ho.id_nivel='$_REQUEST[nivel]' and ho.id_dia='$dia' and ho.id_hora='$horaid'") or
+                die("Problemas en el select:".mysqli_error($conexion));
+
+                if ($h=mysqli_fetch_array($horario))
+                {
+                    echo utf8_encode($h['nombre'].'<br>');
+                    echo utf8_encode('<br>'.$h['nombres'].'<br>'.$h['apellidos']);
+                   
+                }
+                
+                 if($reg['id']==5){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+                    
+                    if($reg['id']==14){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+        ?>
+        </td>
+        <td class="warning">
+            
+            <?php
+        $horaid=$reg['id'];
+        $dia=2;
+        $horario=mysqli_query($conexion,"SELECT * FROM horario AS ho INNER JOIN materia AS ma ON ho.id_materia=ma.id INNER JOIN docente AS do ON ho.cedula_docente=do.cedula WHERE ho.id_nivel='$_REQUEST[nivel]' and ho.id_dia='$dia' and ho.id_hora='$horaid'") or
+                die("Problemas en el select:".mysqli_error($conexion));
+
+                if ($h=mysqli_fetch_array($horario))
+                {
+                    echo utf8_encode($h['nombre'].'<br>');
+                    echo utf8_encode('<br>'.$h['nombres'].'<br>'.$h['apellidos']);
+                   
+                }
+                
+                 if($reg['id']==5){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+                    
+                    if($reg['id']==14){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+        ?>
+        </td>
+        <td class="active">
+            <?php
+        $horaid=$reg['id'];
+        $dia=3;
+        $horario=mysqli_query($conexion,"SELECT * FROM horario AS ho INNER JOIN materia AS ma ON ho.id_materia=ma.id INNER JOIN docente AS do ON ho.cedula_docente=do.cedula WHERE ho.id_nivel='$_REQUEST[nivel]' and ho.id_dia='$dia' and ho.id_hora='$horaid'") or
+                die("Problemas en el select:".mysqli_error($conexion));
+
+                if ($h=mysqli_fetch_array($horario))
+                {
+                    echo utf8_encode($h['nombre'].'<br>');
+                    echo utf8_encode('<br>'.$h['nombres'].'<br>'.$h['apellidos']);
+                   
+                }
+                
+                 if($reg['id']==5){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+                    
+                    if($reg['id']==14){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+        ?>
+        </td>
+        <td class="warning">
+            <?php
+        $horaid=$reg['id'];
+        $dia=4;
+        $horario=mysqli_query($conexion,"SELECT * FROM horario AS ho INNER JOIN materia AS ma ON ho.id_materia=ma.id INNER JOIN docente AS do ON ho.cedula_docente=do.cedula WHERE ho.id_nivel='$_REQUEST[nivel]' and ho.id_dia='$dia' and ho.id_hora='$horaid'") or
+                die("Problemas en el select:".mysqli_error($conexion));
+
+                if ($h=mysqli_fetch_array($horario))
+                {
+                    echo utf8_encode($h['nombre'].'<br>');
+                    echo utf8_encode('<br>'.$h['nombres'].'<br>'.$h['apellidos']);
+                   
+                }
+                
+                 if($reg['id']==5){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+                    if($reg['id']==14){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+        ?>
+        </td>
+        <td class="active">
+            <?php
+        $horaid=$reg['id'];
+        $dia=5;
+        $horario=mysqli_query($conexion,"SELECT * FROM horario AS ho INNER JOIN materia AS ma ON ho.id_materia=ma.id INNER JOIN docente AS do ON ho.cedula_docente=do.cedula WHERE ho.id_nivel='$_REQUEST[nivel]' and ho.id_dia='$dia' and ho.id_hora='$horaid'") or
+                die("Problemas en el select:".mysqli_error($conexion));
+
+                if ($h=mysqli_fetch_array($horario))
+                {
+                    echo utf8_encode($h['nombre'].'<br>');
+                    echo utf8_encode('<br>'.$h['nombres'].'<br>'.$h['apellidos']);
+                   
+                }
+                
+                 if($reg['id']==5){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+                    
+                    if($reg['id']==14){
+                        echo 'Recreo';
+                    }
+                    else{
+                        
+                    }
+        ?>
+        </td>
+        
+       
+        </tr>
+                                    <?php
+                            }          
+                                      ?>
+
+                                </tbody>
+    </table>
+    <div class="col-lg-12">
+        <br>
+        <FONT FACE="Open Sans" SIZE=3 COLOR="black"><strong>Listado de Estudiantes</strong></font>
+                   
+               </div>
+               <table class="table">
+                   <tr>
+                       <td>
+                           Nombre
+                       </td>
+                       <td>
+                           Apellido
+                       </td>
+                   </tr>
+                   <?php
+                   include '../conexion3.php';
+                   $nivel=mysqli_query($conexion,"select * from nivel AS ni where ni.curso='$_REQUEST[curso]' and paralelo='$_REQUEST[paralelo]'") or
+                        die("Problemas en el select:".mysqli_error($conexion));
+
+                      if ($niv=mysqli_fetch_array($nivel))
+                      {
+                         $nivel=$niv['id']; 
+                      }
+                      
+    $registros=mysqli_query($conexion,"select es.nombres AS nombres, es.apellidos AS apellidos, es.cedula AS cedula from nivel_estudiante AS ne INNER JOIN estudiante AS es ON ne.cedula_estudiante = es.cedula where ne.id_nivel='$nivel'") or
+        die("Problemas en el select:".mysqli_error($conexion));
+
+                      while ($reg=mysqli_fetch_array($registros))
+                      {
+                          
+                          ?>
+                        <tr>
+                            <td>
+                            <?php
+                            echo utf8_encode($reg['nombres']);
+                            ?>
+                            </td>
+                            <td>
+                            <?php
+                            echo utf8_encode($reg['apellidos']);
+                            ?> 
+                            </td>
+                        </tr>     
+                              
+                              <?php
+                      }
+                   ?>
+                   
+               </table>
+                                     <?php
+                                        
+                                    }
+                                    else
+                                    {
+                                        ?>
+                                </table>
+                        <?php 
+                        
+                                    
+                                        
+                                    
+                        ?>
+            <div class="panel-group" id="accordion">
+                        
+                <div class="panel">
+                    <div class="col-sm-12 panel">
+                        <h4> <?php
+                                if($var_curso==1){
+                                 echo $_REQUEST['curso'];
+                                   
+                                }
+                                //xxxx
+                                ?>
+                        </h4>
+                    </div>
+                    <?php
+                            if($var_curso==1){
+                                
+                            //echo $_REQUEST['oferta'];
+                                $curso= html_entity_decode($_REQUEST['curso']);
+                                if ($curso=='Décimo'){
+                                    $curso='Decimo';
+                                }
+                            //echo $curso;
+                            $registros2=mysqli_query($conexion,"SELECT * FROM nivel WHERE oferta='$_REQUEST[oferta]' and curso='$curso' ORDER BY paralelo") or
+                              die("Problemas en el select:".mysqli_error($conexion));
+
+                            while ($reg2=mysqli_fetch_array($registros2))
+                            {
+                            
+                                
+
+                            ?>
+                       
+                            <div class="col-sm-2 panel">
+                                <h5 align="center">
+                                   <a href="notas_bloque?nivel=<?php echo $reg2['id'];?>&oferta=<?php echo $reg2['oferta'];?>&modalidad=<?php echo $reg2['modalidad'];?>&curso=<?php echo $reg2['curso'];?>&paralelo=<?php echo $reg2['paralelo'];?>" style="color:#000000;" align="center"> <?php echo $_REQUEST['curso'];?> <?php echo $reg2['paralelo'];?></a></h5>
+                            </div>
+                            <?php
+                            }
+                            }
+                            else{
+                            
+                                ?>
+                       
+                            
+                                <h4> Seleccione Un curso</h4>
+                            
+                            <?php
+                                
+                            }
+                                
+                            ?>
+                </div>
+            </div>
+                <?php 
+                }
+                ?>
+                        
+        </div>                                
+    </div>
+</div>
+   </div>
+             
+</div>
+    </div>  
+</div><?php //col-md-12 lin 55?>                    
+ @endsection
+
+
+
+    
+        
