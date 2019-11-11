@@ -8,7 +8,6 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
 </style>
 
 @extends('layouts.plantilla')
@@ -31,9 +30,7 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <tbody>
-                                    <tr>
-                                        <th>ID</th><td>{{ $docente->id }}</td>
-                                    </tr>
+                                    
                                     <tr><th> Cedula </th><td> {{ $docente->cedula }} </td></tr>
                                     <tr><th> Grado </th><td> {{ $docente->grado }} </td></tr>
                                     <tr><th> Nombres </th><td> {{ $docente->nombres }} </td></tr>

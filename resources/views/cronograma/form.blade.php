@@ -23,7 +23,7 @@
 </div>
 <div class="form-group {{ $errors->has('nombre') ? 'has-error' : ''}}">
     <label for="nombre" class="control-label">{{ 'Nombre' }}</label>
-    <textarea class="form-control" rows="1" name="nombre" required="true" type="textarea" id="nombre" >{{ isset($cronograma->nombre) ? $cronograma->nombre : ''}}</textarea>
+    <input class="form-control" name="nombre" required="true" type="text" id="nombre" value="{{ isset($cronograma->nombre) ? $cronograma->nombre : ''}}">
     {!! $errors->first('nombre', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('descripcion') ? 'has-error' : ''}}">

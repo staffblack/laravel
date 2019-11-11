@@ -6,6 +6,7 @@ Route::resource('noticia', 'T_noticiasController');
 Route::resource('evento', 'T_eventosController');
 Route::resource('evento_view', 'A_eventosController');
 Route::get('eventos_view', 'T_eventoController@index2');
+Route::get('notas_bloque2', 'HorarioController@index2');
 
 
 Route::get('updateestudiante', 'T_nuestro_colegioController@updateestudiante');

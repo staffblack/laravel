@@ -1,5 +1,5 @@
 <style type="text/css">
-<!--
+
 .Estilo1 {font-weight: bold}
 .body {
   color: #ffffff;
@@ -8,13 +8,12 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
 </style>
 
 @extends('layouts.plantilla')
 @section('content')
 <div class="col-lg-12 panel">
-    <div class="card-header">Editar Docente #{{ $docente->id }}</div>
+    <div class="card-header">Editar Docente </div>
         <div class="card-body">
                         <a href="{{ url('/docente') }}" title="Volver"><button class="btn btn-warning btn-sm"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</button></a>
                         <br />

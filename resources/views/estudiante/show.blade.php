@@ -8,14 +8,13 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
 </style>
 
 @extends('layouts.plantilla')
 @section('content')
 <div class="col-lg-12">
                 
-                    <div class="card-header">Estudiante {{ $estudiante->id }}</div>
+                    <div class="card-header">Estudiante</div>
                     <?php
                     include '../conexion3.php';
                     ?>

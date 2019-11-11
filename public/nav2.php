@@ -130,7 +130,7 @@
                         <a class="nav-link" href="cronograma1">&nbsp;&nbsp;Cronograma&nbsp;&nbsp;</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="notas_bloque">&nbsp;&nbsp;Notas de bloque&nbsp;&nbsp;</a>
+                        <a class="nav-link" href="notas_bloque">Notas de bloque&nbsp;&nbsp;</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="formularios1">&nbsp;&nbsp;Formularios&nbsp;&nbsp;</a>

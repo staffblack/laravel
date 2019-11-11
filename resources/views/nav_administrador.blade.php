@@ -521,7 +521,7 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
         <div class="panel panel-info">
             &nbsp;&nbsp;&nbsp;&nbsp;
             <h8 id="heading"><span class="glyphicon glyphicon-hand-right">
-                </span> <a href="{{ action('T_nota_estudianteController@index') }}" id="heading">&nbsp;&nbsp;Notas de Bloque</a>
+                </span> <a href="{{ action('T_nota_estudianteController@index') }}" id="heading">Notas de Bloque</a>
             </h8>
         </div>
   

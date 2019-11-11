@@ -35,6 +35,40 @@ class HorarioController extends Controller
         return view('horario.index', compact('nivel'));
     }
 
+    public function index2(Request $request)
+    {
+        
+
+$nombre_oferta='';
+if (isset($_GET["nombre_oferta"]))
+
+{
+
+
+
+ $nombre_oferta=$_GET["nombre_oferta"];
+
+    
+}	
+    
+
+$lista_niveles = \DB::table('nivel')
+    ->select('nivel.id', 'nivel.curso','nivel.paralelo','nivel.oferta','nivel.modalidad')
+    ->orderBy('nivel.curso', 'asc')
+    ->orderBy('nivel.paralelo', 'asc')
+    ->where('nivel.oferta',$nombre_oferta)
+    ->get();
+ 
+
+    
+    $lista_ofertas = \DB::table('oferta')
+    ->select('*')
+    ->get();
+    
+    return view('notas_bloque2')->with('niveles',$lista_niveles)->with('ofertas',$lista_ofertas)->with('mensaje','')->with('menu','notas_bloque');
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

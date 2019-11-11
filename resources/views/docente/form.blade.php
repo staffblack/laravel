@@ -26,12 +26,12 @@
 </div>
 <div class="form-group {{ $errors->has('telefono') ? 'has-error' : ''}}">
     <label for="telefono" class="control-label">{{ 'Telefono' }}</label>
-    <input class="form-control" name="telefono" type="number" id="telefono" required="true" value="{{ isset($docente->telefono) ? $docente->telefono : ''}}" >
+    <input class="form-control" name="telefono" type="text" id="telefono" required="true" value="{{ isset($docente->telefono) ? $docente->telefono : ''}}" maxlength="10" minlength="10" pattern="[0-9]+" title="Solo numero con un rando de 10 numeros">
     {!! $errors->first('telefono', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('cargo') ? 'has-error' : ''}}">
     <label for="cargo" class="control-label">{{ 'Cargo' }}</label>
-    <select class="form-control" name="cargo" id="cargo">
+    <select class="form-control" name="cargo" id="cargo" style="font-size: 10pt">
         <option value="{{ isset($docente->cargo) ? $docente->cargo : ''}}">{{ isset($docente->cargo) ? $docente->cargo : ''}}</option>
         <option value="Administrador">Administrador(a)</option>
         <option value="Secretaria">Secretaria</option>
@@ -46,12 +46,14 @@
 <div class="form-group {{ $errors->has('area') ? 'has-error' : ''}}">
     <label for="area" class="control-label">{{ 'Area' }}</label>
     
-    <select class="form-control" name="area">
-        <option value="{{ isset($docente->area) ? $docente->area : ''}}">{{ isset($docente->area) ? $docente->area : ''}}</option>
-        
-                @foreach($area as $area)
-                <option>{{$area->nombre}}</option>
-                @endforeach
+    <select class="form-control" name="area" style="font-size: 10pt;">
+            <option>LENGUA Y LITERATURA</option>
+            <option>MATEMÁTICAS</option>
+            <option>CIENCIAS NATURALES</option>
+            <option>EDUCACIÓN FÍSICA</option>
+            <option>INGLÉS</option>
+            <option>EDUCACION CULTURAL Y ARTISTICA</option>
+            <option>CIENCIAS SOCIALES</option>
     </select>
     {!! $errors->first('area', '<p class="help-block">:message</p>') !!}
 </div>

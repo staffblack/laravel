@@ -16,7 +16,7 @@
 </div>
 <div class="form-group {{ $errors->has('telefono_representante') ? 'has-error' : ''}}">
     <label for="telefono_representante" class="control-label">{{ 'telefono_representante' }}</label>
-    <input class="form-control" name="telefono_representante" type="text" id="telefono_representante" value="{{ isset($estudiante->telefono_representante) ? $estudiante->telefono_representante : ''}}" required>
+    <input class="form-control" name="telefono_representante" type="text" id="telefono_representante" value="{{ isset($estudiante->telefono_representante) ? $estudiante->telefono_representante : ''}}" required maxlength="10" minlength="10" pattern="[0-9]+" title="Solo numero con un rando de 10 numeros">
     {!! $errors->first('telefono_representante', '<p class="help-block">:message</p>') !!}
 </div>
 
