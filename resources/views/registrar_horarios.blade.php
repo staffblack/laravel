@@ -52,7 +52,12 @@ alert("Horario Editado Satisfactoriamente");
 @section('content')
     <div class="col-lg-12 panel">
         <div class="table-responsive">
-            <table class="table">
+          <div col-lg-12 panel>
+
+          </div>
+            <table>
+              <tr>
+              </tr>
             <tr>
                 <td class="Estilo30"><a href="javascript:history.back()" class="btn btn-primary"> Volver Atrás</a>&nbsp;&nbsp;&nbsp;<span class="Estilo16">{{$descripcion_nivel}}</span></td>
             </tr>
@@ -60,8 +65,9 @@ alert("Horario Editado Satisfactoriamente");
                 <td width="778">
                     <form name="form1" method="post" action="/portal/public/horarios">
                     <p>{{ csrf_field() }} </p>
-          <table width="100%" class="table table-striped table-bordered table-hover" id="tableMonedas">
-              
+          <table width="100%" class="table" id="tableMonedas">
+              <tr>
+                </tr>
                 <tr>
                   <th colspan="3" class="text-center Estilo20 Estilo16">Responsable Nivel </th>
                 </tr>
@@ -97,8 +103,9 @@ alert("Horario Editado Satisfactoriamente");
               </tfoot>
           </table>
           <br>
-            <table width="807" class="table table-striped table-bordered table-hover" id="tableMonedas">
-              
+            <table width="807" class="table table-striped table-hover" id="tableMonedas">
+                <tr>
+                  </tr>
                 <tr>
                   <td colspan="3" class="text-center Estilo20 Estilo16"><input type="hidden" name="nivel" id="nivel" value="{{$id_nivel}}" >
                       <input type="hidden" name="modalidad_nivel" id="modalidad_nivel" value="{{$modalidad_nivel}}" >
@@ -218,7 +225,7 @@ alert("Horario Editado Satisfactoriamente");
             </table>
           <p>&nbsp;</p>
         </form>
-            <table width="100%" border="1" cellspacing="0" class="table table-striped table-bordered table-hover"  id="tableMonedas">
+            <table width="100%" border="0" cellspacing="0" class="table table-striped table-bordered table-hover"  id="tableMonedas">
               
                 <tr>
                   <th class="text-center Estilo16 Estilo33">&nbsp;</th>

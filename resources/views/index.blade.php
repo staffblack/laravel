@@ -32,26 +32,26 @@ switch(cont%4+1)
  break;
  case 2:
  document.getElementById("fotocambia").src="images/iconos/3.png";
- document.getElementById("fotocambiau1").href="<?php echo $url1;?>";
+ document.getElementById("fotocambiau1").href="<?php echo $url3;?>";
  
  document.getElementById("fotocambia2").src="images/iconos/4.png";
- document.getElementById("fotocambiau2").href="<?php echo $url2;?>";
+ document.getElementById("fotocambiau2").href="<?php echo $url4;?>";
  
  
  document.getElementById("fotocambia3").src="images/iconos/5.png"; 
- document.getElementById("fotocambiau3").href="<?php echo $url3;?>";
+ document.getElementById("fotocambiau3").href="<?php echo $url5;?>";
  
  break;
  case 3:
  document.getElementById("fotocambia").src="images/iconos/6.png";
- document.getElementById("fotocambiau1").href="<?php echo $url1;?>";
+ document.getElementById("fotocambiau1").href="<?php echo $url6;?>";
  
  document.getElementById("fotocambia2").src="images/iconos/7.png";
- document.getElementById("fotocambiau2").href="<?php echo $url1;?>";
+ document.getElementById("fotocambiau2").href="<?php echo $url7;?>";
  
  
  document.getElementById("fotocambia3").src="images/iconos/8.png"; 
- document.getElementById("fotocambiau3").href="<?php echo $url3;?>";
+ document.getElementById("fotocambiau3").href="<?php echo $url8;?>";
  break;
  case 4:
 document.getElementById("fotocambia").src="images/iconos/1.png";
@@ -62,7 +62,7 @@ document.getElementById("fotocambia").src="images/iconos/1.png";
  
  
  document.getElementById("fotocambia3").src="images/iconos/7.png"; 
- document.getElementById("fotocambiau3").href="<?php echo $url3;?>";
+ document.getElementById("fotocambiau3").href="<?php echo $url7;?>";
  
  break;
  }
@@ -247,20 +247,22 @@ window.onload=inicio;
                         </div>                         
                         <div class="col-sm-12 widget-container-col">
                             <div class="col-sm-1 widget-container-col" align="center"> 
+                                <a href="https://www.facebook.com/ADRISS.BASTI">
                                 <img  src="images/iconos/facebook.png" class="img-fluid" alt="Responsive image" width="100" height="100">
+                                </a>
                                 <br>
                                 <h4 ><strong>Siguenos</strong></h4>                                
                             </div>
                              
                              <div class="col-sm-1 widget-container-col" align="center"> 
-                                <img src="images/iconos/mail.jpg" class="img-fluid" alt="Responsive image" width="100" height="100"> 
+                                    <a href="mailto: adriepn.asi@gmail.com"><img src="images/iconos/mail.jpg" class="img-fluid" alt="Responsive image" width="100" height="100"> </a>
                                 <br>
-                                <label>Contactanos</label>
+                                <h4><strong>Contactanos&nbsp;&nbsp;&nbsp;&nbsp;</strong></h4>
                             </div>
                             <div class="col-sm-1 widget-container-col" align="center"> 
-                                <img src="images/iconos/sugerencias.jpg" class="img-fluid" alt="Responsive image" width="100" height="100">
+                                    <a href="mailto:17h01943@gmail.com"><img src="images/iconos/sugerencias.jpg" class="img-fluid" alt="Responsive image" width="100" height="100"></a>
                                 <br>
-                                <label>Sugerencias</label> 
+                                <h4><strong>Sugerencias&nbsp;</strong></h4>
                             </div>
                             <div class="col-sm-9 widget-container-col" align="center"> 
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7333084079933!2d-78.3750486852467!3d-0.37402599972711026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5b951d557628d%3A0xa0742ac73982c2d6!2sColegio%20Nacional%20General%20Pintag!5e0!3m2!1ses-419!2sec!4v1568949449484!5m2!1ses-419!2sec" width="100%" height="100" frameborder="0" style="border:0;" allowfullscreen=""></iframe>

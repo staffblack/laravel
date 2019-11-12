@@ -213,8 +213,7 @@
          
                             <div class="input-group">
                                 
-                                <input type="text" class="form-control" name="search" placeholder="Buscar..." value="{{ request('search') }}">
-                                <br>&nbsp;
+                                
                                 <span class="input-group-append">
                                                                    
                                 </span>
