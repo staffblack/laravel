@@ -181,10 +181,12 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
     
    ?>
 <div class="panel-heading">
-                                <h5 class="panel-title">
-                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-user">
-                                    </span>Login</a>
-                                </h5>
+    <br>
+        <h6 class="panel-title">
+                &nbsp;<span class="glyphicon glyphicon-th">
+                 Login</span>
+            </h6>
+    <br>        
 </div>
 <div align="center">
             <form class="form-search" action="notas_bloque" method="post" enctype="multipart/form-data" id="save_post">
@@ -199,16 +201,16 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
                                     </strong>
                                 </span>
                                 <br>
-                                    <input name="login" type="text" id="login" value="{{ old('login') }}" >
+                                    <input name="login" class="form-control" type="text" id="login" value="{{ old('login') }}" >
                                     <br>
                                     <span class="Estilo3 Estilo30 Estilo5"><strong>Password</strong></span>
                                     <br>
-                                    <input name="password" type="password" id="password" value="{{ old('password') }}">
+                                    <input name="password" class="form-control" type="password" id="password" value="{{ old('password') }}">
                                   <br>
                                     <span class="Estilo3 Estilo30 Estilo5"><strong>Perfil</strong></span>
                                  <br>
                                     <span class="Estilo5">
-                                      <select name="perfil" id="perfil">
+                                      <select name="perfil" id="perfil" class="form-control">
                                         <option value="Administrador">Administrador</option>
                                         <option value="Docente">Docente/Tutor</option>
                                         <option value="Estudiante">Estudiante</option>
@@ -226,7 +228,7 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
                             <div align="center">
                                         <input name="cancelar" type="submit" id="cancelar" value="Cancelar">
                             </div>
-                            <div align="justify" class="Estilo37 Estilo4">Nota: Si ingresa por primera vez el password va ser el mismo que su Logín. 
+                            <div align="justify" class="Estilo37 Estilo4">Nota: Si ingresa por primera vez el password debe ser el mismo que su Logín. 
                             </div>
                             
 
@@ -599,7 +601,7 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
 else{
     ?>
         <ul class="nav nav-list">
-
+                <meta http-equiv="Refresh" content="2;url={{ action('T_notas_bloqueController@index') }}">
         </ul>
     <?php
     
@@ -637,7 +639,7 @@ if(($page=="usuario_secretaria")or($page=="Secretaria"))
         <div class="panel panel-info">
             &nbsp;&nbsp;&nbsp;&nbsp;
             <h8 id="heading"><span class="glyphicon glyphicon-hand-right">
-                </span> <a href="{{ action('T_notas_bloqueController@index') }}" id="heading">&nbsp;&nbsp;Salir</a>
+                </span> <a href="{{ action('HorarioController@cerrar') }}" id="heading">&nbsp;&nbsp;-->Salir</a>
             </h8>
         </div>
   

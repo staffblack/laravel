@@ -98,7 +98,7 @@ public function show(Request $request)
 		
 		    }
 			
-                                session(['login' => $login]);
+                session(['login' => $login]);
 				session(['password' => $password]);
 				session(['perfil' => $perfil]);
 				session(['nombres_usuario' => $nombres_usuario]);
@@ -174,13 +174,13 @@ public function show(Request $request)
                                                         $email_usuario=$docente->email;
 
                                                         }
-                                                        session(['idsession' => $idsession]);
-                                                          session(['login' => $login]);
-                                                          session(['password' => $password]);
-                                                          session(['perfil' => $perfil]);
-                                                          session(['nombres_usuario' => $nombres_usuario]);
-                                                          session(['apellidos_usuario' => $apellidos_usuario]);
-                                                          session(['email_usuario' => $email_usuario]);
+                                                            session(['idsession' => $idsession]);
+                                                            session(['login' => $login]);
+                                                            session(['password' => $password]);
+                                                            session(['perfil' => $perfil]);
+                                                            session(['nombres_usuario' => $nombres_usuario]);
+                                                            session(['apellidos_usuario' => $apellidos_usuario]);
+                                                             session(['email_usuario' => $email_usuario]);
                                                           $redireccion='usuario_docente';
                                                           return  view($redireccion)->with('login',$login)->with('password',$password)->with('perfil',$perfil)->with('menu','usuario_docente');
                                                           

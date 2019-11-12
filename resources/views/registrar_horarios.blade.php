@@ -219,7 +219,7 @@ alert("Horario Editado Satisfactoriamente");
                       <input name="opcion" type="submit" id="opcion" value="Registrar Horario" class="btn btn-primary">
                       <input name="id_nivel" type="hidden" value="<?php echo $_REQUEST['id_nivel']?>">
                 </div></th>
-                  <th width="281" class="text-center Estilo20 Estilo16"><a href="mostrar_horario_nivel?id_nivel={{$id_nivel}}&&modalidad_nivel={{$modalidad_nivel}}&&descripcion_nivel={{$descripcion_nivel}}" target="_blank">Ver Horario </a></th>
+                  <th width="281" class="text-center Estilo20 Estilo16"></th>
                 </tr>
               </tfoot>
             </table>

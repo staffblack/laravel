@@ -69,6 +69,22 @@ $lista_niveles = \DB::table('nivel')
 
     }
 
+    
+
+    public function cerrar(Request $request)
+    {
+        
+ 
+                session()->forget('login');
+                session()->forget('password');
+                session()->forget('perfil');
+
+        session()->forget('nombres_usuario');
+        session()->forget('apellidos_usuario');
+        return view('horario.cerrar')->with('mensaje','')->with('menu','notas_bloque');
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

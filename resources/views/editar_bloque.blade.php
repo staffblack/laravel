@@ -69,9 +69,9 @@ function filter(__val__){
 &nbsp;&nbsp;
     
            
-            <div class="col-lg-10 panel"><br>
-  <div style="overflow-x:auto;">
-      <table width="100%" border="0" cellspacing="3">
+            <div class="col-lg-12 panel"><br>
+              <div class="table-responsive">
+                  <table class="table">
         <tr>
           <td valign="top">
             <span class="Estilo30">

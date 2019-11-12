@@ -251,7 +251,7 @@
                     <div class="col-sm-2 panel panel-default">
                         @include('nav_administrador')
                     </div>
-                    <div class="col-sm-10 panel panel-default">
+                    <div class="col-sm-10">
                                 <?php 
                             }
                         ?>

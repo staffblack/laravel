@@ -8,7 +8,6 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
 </style>
 
 @extends('layouts.plantilla')
@@ -19,7 +18,8 @@
 <div class="col-lg-10  panel panel-default"> 
   <a href="javascript:history.back()" class="btn btn-primary"> Volver Atrás</a> 
   
-        <table class="table" id="tableMonedas">
+  <div class="table-responsive">
+      <table class="table">
           
             <tr>
               <th>Oferta</th>
@@ -45,5 +45,6 @@
       </table>
   </table>
   <p>&nbsp;</p>
+</div>
 </div>
 @endsection

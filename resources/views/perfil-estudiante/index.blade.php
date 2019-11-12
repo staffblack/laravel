@@ -20,7 +20,7 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -34,6 +34,18 @@ th, td {
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
+
+.boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 2px solid #000000;
+  }
+
 </style>
 @extends('layouts.plantilla')
 <div class="container">
@@ -59,7 +71,7 @@ tr:nth-child(even){background-color: #f2f2f2}
 <div class="collapse" id="collapseExample2">
   
     <div class="col-lg-12">
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapsebloque1" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a class="boton_personalizado" style="border: 1" data-toggle="collapse" href="#collapsebloque1" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Bloque 1
         </a>
         <div class="collapse" id="collapsebloque1">
@@ -110,7 +122,7 @@ while ($reg=mysqli_fetch_array($registros))
         <br><hr>
             </div>        
         </div>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapsebloque2" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a class="boton_personalizado" data-toggle="collapse" href="#collapsebloque2" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Bloque 2
         </a>
 		
@@ -123,7 +135,7 @@ while ($reg=mysqli_fetch_array($registros))
         </tr>
         <?php
         $cedula=session('login');
-        echo 'Cedula:'.$cedula;
+        //echo 'Cedula:'.$cedula;
         include '../conexion3.php';
         $registros=mysqli_query($conexion,"select * from notas AS no INNER JOIN materia AS ma  ON no.id_materia=ma.id where no.cedula_estudiante='$cedula' and id_bloque = '2' ORDER BY ma.id ") or
   die("Problemas en el select:".mysqli_error($conexion));
@@ -162,7 +174,7 @@ while ($reg=mysqli_fetch_array($registros))
         </div>
             <hr>
         </div>
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapsebloque3" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a class="boton_personalizado" data-toggle="collapse" href="#collapsebloque3" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Bloque 3
         </a>
 		
@@ -176,7 +188,7 @@ while ($reg=mysqli_fetch_array($registros))
         </tr>
         <?php
         $cedula=session('login');
-        echo 'Cedula:'.$cedula;
+        //echo 'Cedula:'.$cedula;
         include '../conexion3.php';
         $registros=mysqli_query($conexion,"select * from notas AS no INNER JOIN materia AS ma  ON no.id_materia=ma.id where no.cedula_estudiante='$cedula' and id_bloque = '3' ORDER BY ma.id ") or
   die("Problemas en el select:".mysqli_error($conexion));
@@ -212,7 +224,7 @@ while ($reg=mysqli_fetch_array($registros))
            </div>     
         </div>
         
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapsebloque4" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a class="boton_personalizado" data-toggle="collapse" href="#collapsebloque4" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Bloque 4
         </a>
 		
@@ -224,7 +236,7 @@ while ($reg=mysqli_fetch_array($registros))
         </tr>
         <?php
         $cedula=session('login');
-        echo 'Cedula:'.$cedula;
+       //echo 'Cedula:'.$cedula;
         include '../conexion3.php';
         $registros=mysqli_query($conexion,"select * from notas AS no INNER JOIN materia AS ma  ON no.id_materia=ma.id where no.cedula_estudiante='$cedula' and id_bloque = '4' ORDER BY ma.id ") or
   die("Problemas en el select:".mysqli_error($conexion));
@@ -262,7 +274,7 @@ while ($reg=mysqli_fetch_array($registros))
              </div>
         </div>
         
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapsebloque5" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a class="boton_personalizado" data-toggle="collapse" href="#collapsebloque5" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Bloque 5
         </a>
 		
@@ -274,7 +286,7 @@ while ($reg=mysqli_fetch_array($registros))
         </tr>
         <?php
         $cedula=session('login');
-        echo 'Cedula:'.$cedula;
+        //echo 'Cedula:'.$cedula;
         include '../conexion3.php';
         $registros=mysqli_query($conexion,"select * from notas AS no INNER JOIN materia AS ma  ON no.id_materia=ma.id where no.cedula_estudiante='$cedula' and id_bloque = '5' ORDER BY ma.id ") or
   die("Problemas en el select:".mysqli_error($conexion));
@@ -314,10 +326,10 @@ while ($reg=mysqli_fetch_array($registros))
             </div>
         </div>
         
-        <a class="btn btn-primary" data-toggle="collapse" href="#collapsebloque6" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a class="boton_personalizado" data-toggle="collapse" href="#collapsebloque6" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Bloque 6
         </a>
-		
+		<br>
         <div class="collapse" id="collapsebloque6">
             <div style="overflow-x:auto;">
             <table class="table">
@@ -326,7 +338,7 @@ while ($reg=mysqli_fetch_array($registros))
         </tr>
         <?php
         $cedula=session('login');
-        echo 'Cedula:'.$cedula;
+        //echo 'Cedula:'.$cedula;
         include '../conexion3.php';
         $registros=mysqli_query($conexion,"select * from notas AS no INNER JOIN materia AS ma  ON no.id_materia=ma.id where no.cedula_estudiante='$cedula' and id_bloque = '6' ORDER BY ma.id ") or
   die("Problemas en el select:".mysqli_error($conexion));
@@ -367,8 +379,10 @@ while ($reg=mysqli_fetch_array($registros))
         
     </div>   
         
-    </div>
+    </div><br>
             </div>
+            <br>
         </div>
+        <br>
     </div>
 @endsection

@@ -616,7 +616,7 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
 else{
     ?>
         <ul class="nav nav-list">
-
+            Ninguno
         </ul>
     <?php
     

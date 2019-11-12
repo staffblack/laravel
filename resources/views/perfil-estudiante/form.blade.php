@@ -11,7 +11,6 @@
 </div>
 <div class="form-group {{ $errors->has('apellidos') ? 'has-error' : ''}}">
 <label for="apellidos" class="control-label">{{ 'Apellidos' }}</label>
-<textarea class="form-control" rows="1" name="apellidos" type="textarea" id="apellidos" >{{ isset($perfilestudiante->apellidos) ? $perfilestudiante->apellidos : ''}}</textarea>
 <input class="form-control" name="apellidos" id="apellidos" type="text"value="{{ isset($perfilestudiante->apellidos) ? $perfilestudiante->apellidos : ''}}" required>
 
 			{!! $errors->first('apellidos', '<p class="help-block">:message</p>') !!}

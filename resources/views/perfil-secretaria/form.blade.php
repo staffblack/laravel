@@ -10,7 +10,7 @@
 </div>
 <div class="form-group {{ $errors->has('login') ? 'has-error' : ''}}">
     <label for="login" class="control-label">{{ 'Login' }}</label>
-    <input class="form-control" name="login" type="text" id="login" required="true" value="{{ isset($perfilsecretarium->login) ? $perfilsecretarium->login : ''}}">
+    <input class="form-control" style="font-size:12px" name="login" type="text" id="login" required="true" value="{{ isset($perfilsecretarium->login) ? $perfilsecretarium->login : ''}}">
     {!! $errors->first('login', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('password') ? 'has-error' : ''}}">
@@ -21,7 +21,7 @@
 
 <div class="form-group {{ $errors->has('perfil') ? 'has-error' : ''}}">
     <label for="perfil" class="control-label">{{ 'Perfil' }}</label>
-    <select name="perfil" class="form-control" id="perfil" >
+    <select name="perfil" class="form-control" id="perfil" style="font-size:12px">
     @foreach (json_decode('{"Secretaria":"Secretaria"}', true) as $optionKey => $optionValue)
         <option value="{{ $optionKey }}" {{ (isset($perfilsecretarium->perfil) && $perfilsecretarium->perfil == $optionKey) ? 'selected' : ''}}>{{ $optionValue }}</option>
     @endforeach

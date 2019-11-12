@@ -8,7 +8,7 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
+
 </style>
 <?php
 $page='quienes_somos';
@@ -19,13 +19,11 @@ $page='quienes_somos';
 <div class="container">
     <div class="row">
         <div class="container">
-        <div class="panel col-lg-12 ">
-            <h4 class="lighter widget-title Estilo3"><span class="Estilo4">General Pintag </span><br /></h4>
+        <div class="col-lg-12 ">
+            <h4 ><b>QUIENES SOMOS</b></h4>
         </div>
         
-        <div class="col-lg-12">
-            &nbsp;
-        </div>
+        
         <div class="col-lg-1">
             &nbsp;
         </div>
@@ -53,7 +51,8 @@ $page='quienes_somos';
         
         
                 <div class="panel col-lg-12 ">
-            <h4 class="lighter widget-title Estilo3"><span class="Estilo4">Misión </span><br /></h4>
+                        <h4 ><b>MISIÓN</b></h4>
+            
         </div>
             
         
@@ -66,21 +65,10 @@ $page='quienes_somos';
             </p>
         <br>
         </div>
-        <div class="panel col-lg-12 ">
-            <h4 class="lighter widget-title Estilo3"><span class="Estilo4">Reseña Historica </span><br /></h4>
-        </div>
-        <div class="panel  col-lg-12">
-        <br>
-            <p style="text-align: justify;">
-            <font size="3" color="black">
-                        Por iniciativa del reverendo padre Carlos  Altamirano,&nbsp; y ante la necesidad de crear una Institución educativa que  brinde servicio a la juventud Pinteña; en compañía de importantes autoridades  de la parroquia consiguen a través del Presidente de la República de ese  entonces, Dr. José María Velasco Ibarra, la aprobación para la apertura del  primer establecimiento secundario de la localidad.
-          . </font>
-            </p>
-        <br>
-        </div>
+        
         
         <div class="panel col-lg-12 ">
-            <h4 class="lighter widget-title Estilo3"><span class="Estilo4">Visión </span><br /></h4>
+            <h4 ><b>VISIÓN</b></h4>
         </div>
         <div class="panel col-lg-12">
         <br>

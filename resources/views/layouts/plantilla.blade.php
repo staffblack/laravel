@@ -265,7 +265,7 @@ if($perfil=='Administrador'){
 
                        // include 'nav2.php';
                     ?>
-                    @include('nav_index')
+                    <?php include 'nav2.php';?>
                 </div>
                         <?php
                             //echo $page;

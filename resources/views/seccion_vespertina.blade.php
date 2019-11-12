@@ -8,7 +8,6 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
 </style>
 <?php
 $page='seccion_vespertina';
@@ -21,7 +20,7 @@ $page='seccion_vespertina';
     <div class="row">
         <div class="container">
         <div class="panel col-lg-12">
-            <h4 class="lighter widget-title Estilo3"><span class="Estilo4">Vespertina  </span><br /></h4>
+                <h4 ><b>VESPERTINA</b></h4>
         </div>
         
         <div class="col-lg-12">
@@ -40,7 +39,8 @@ $page='seccion_vespertina';
                     <br>
                 </div>
                 <div class="panel col-lg-12">
-                    <h4 class="lighter widget-title Estilo3"><span class="Estilo4">EDUCACIÓN BÁSICA SUPERIOR </span></h4>
+                        <h4 ><b>EDUCACIÓN BÁSICA SUPERIOR</b></h4>
+                    <h4 class="lighter widget-title Estilo3"><span class="Estilo4"> </span></h4>
                     <div align="justify">
                         <p style="text-align: justify;">
                             <font size="3" color="black">
@@ -61,7 +61,8 @@ $page='seccion_vespertina';
                     <br>
                 </div>
                 <div class="panel col-lg-12">
-                    <h4 class="lighter widget-title Estilo3"><span class="Estilo4">BACHILLERATO GENERAL UNIFICADO </span><br />
+                        <h4 ><b>BACHILLERATO GENERAL UNIFICADO</b></h4>
+                    <h4 class="lighter widget-title Estilo3"><span class="Estilo4"> </span><br />
                       </h4>
                     
                     <div align="justify">

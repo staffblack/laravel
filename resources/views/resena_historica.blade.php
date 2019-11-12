@@ -8,7 +8,7 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
+
 </style>
 <?php
 $page='resena_historica';
@@ -25,7 +25,7 @@ $page='resena_historica';
         
         <br>
         <div class="panel col-lg-12 ">
-            <h4 class="lighter widget-title Estilo3"><span class="Estilo4">RESEÑA HISTÓRICA </span><br /></h4>
+            <h4 class="lighter widget-title Estilo3"><span ><strong> RESEÑA HISTÓRICA</strong> </span><br /></h4>
         </div>
         <div class="panel col-lg-12 panel-default">
             <div class="panel  col-lg-3">

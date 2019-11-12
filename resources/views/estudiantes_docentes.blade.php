@@ -58,13 +58,11 @@ alert("Editado Satisfactoriamente");
     
 }
 ?>          
-<div class="col-lg-10"><br>
+<div class="col-lg-12"><br>
     <div class="col-lg-12 panel panel-default">
         <a href="nota_estudiante" class="btn btn-primary">Notas de Bloque </a>
     </div>
-    <div class="col-lg-12 panel panel-default">
-        <a href="materia_docentes?id_nivel={{$id_nivel}}&&descripcion_nivel={{$descripcion_nivel}}" class="btn btn-primary">{{$descripcion_nivel }}</a>
-    </div>
+   
     <?php 
     include '../conexion3.php';
     $modalidad=mysqli_query($conexion,"select * from nivel where id='$id_nivel'") or
@@ -79,8 +77,8 @@ alert("Editado Satisfactoriamente");
         <a href="editar_bloque?id_nivel={{$id_nivel}}&modalidad_nivel=<?php echo $nmodalidad;?>&descripcion_nivel={{$descripcion_nivel}}&&id_bloque={{$id_bloque}}&&nombre_bloque={{$nombre_bloque}}&&numnota=1" class="btn btn-primary">Editar {{$nombre_bloque}}</a>
     
     </div>
-    
-    <table class="table">
+    <div class="table-responsive">
+        <table class="table">
             <tbody>
            <tr>   
                <?php

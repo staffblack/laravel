@@ -8,7 +8,7 @@
 	color: #007bff;
 	font-weight: bold;
 }
--->
+
 </style>
 <?php
 $page='seccion_matutina';
@@ -23,7 +23,8 @@ $page='seccion_matutina';
     <div class="row">
         <div class="container">
         <div class="panel  col-lg-12">
-            <h4 class="lighter widget-title Estilo3"><span class="Estilo4">Matutina </span><br /></h4>
+            <h4 class="lighter widget-title Estilo3"><span class="Estilo4"> </span><br /></h4>
+            <h4 ><b>MATUTINA</b></h4>
         </div>
         
         <div class="col-lg-12">
@@ -41,7 +42,7 @@ $page='seccion_matutina';
                     <br>
                 </div>
                 <div class="panel col-lg-12">
-                    <h4 class="lighter widget-title Estilo3"><span class="Estilo4">BACHILLERATO GENERAL UNIFICADO </span></h4>
+                        <h4 ><b>BACHILLERATO GENERAL UNIFICADO</b></h4>
                     <div align="justify">
                         <p style="text-align: justify;">
                             <font size="3" color="black">
@@ -61,8 +62,8 @@ $page='seccion_matutina';
                     <br>
                 </div>
                 <div class="panel col-lg-12">
-                    <h4 class="lighter widget-title Estilo3"><span class="Estilo4">BACHILLERATO INTERNACIONAL </span><br />
-                      </h4>
+                        <h4 ><b>BACHILLERATO INTERNACIONAL</b></h4>
+                    
                     
                     <div align="justify">
                         <font size="3" color="black">
