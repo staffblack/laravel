@@ -601,7 +601,7 @@ elseif(($page=='resena_historica') or ($page=='quienes_somos')){
 else{
     ?>
         <ul class="nav nav-list">
-                <meta http-equiv="Refresh" content="2;url={{ action('T_notas_bloqueController@index') }}">
+               
         </ul>
     <?php
     

@@ -235,8 +235,7 @@ tr:nth-child(even){background-color: #f2f2f2}
          
                             <div class="input-group">
                                 
-                                <input type="text" class="form-control" name="search" placeholder="Buscar..." value="{{ request('search') }}">
-                                <br>&nbsp;
+                               
                                 <span class="input-group-append">
                                                                    
                                 </span>

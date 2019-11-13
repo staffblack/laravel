@@ -55,12 +55,22 @@ tr:nth-child(even){background-color: #f2f2f2}
                  <?php $cedula=session('login');
  include '../conexion3.php';
  
+ 
+ $modalidad = mysqli_query($conexion, "SELECT * FROM `nivel_estudiante` INNER JOIN estudiante ON nivel_estudiante.cedula_estudiante=estudiante.cedula INNER JOIN nivel ON nivel.id=nivel_estudiante.id_nivel WHERE nivel_estudiante.cedula_estudiante='$cedula'" ) or
+    die("Problemas en el select:" . mysqli_error($conexion));
+
+  if ($mod = mysqli_fetch_array($modalidad)) {
+      $modalidad=$mod['modalidad'];
+      //echo 'modalidad='.$modalidad;
+  }
+ 
  $registros = mysqli_query($conexion, "select * FROM tutor_nivel as tutor INNER JOIN nivel_estudiante AS estudiante ON tutor.id_nivel=estudiante.id_nivel INNER JOIN docente AS doc ON doc.cedula= tutor.cedula_docente WHERE estudiante.cedula_estudiante='$cedula'" ) or
     die("Problemas en el select:" . mysqli_error($conexion));
 
   while ($reg = mysqli_fetch_array($registros)) {
 	  $tutor=$reg['nombres'].''.$reg['apellidos'];
-	  $nivel=$reg['id_nivel'];
+    $nivel=$reg['id_nivel'];
+    echo 'Tutor:'.$tutor;
   }
  ?>
 <p align="center">
@@ -109,7 +119,7 @@ while ($reg=mysqli_fetch_array($registros))
                 <?php 
                 if(isset($bloque1)){
                   ?>
-                <a href="../public/pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=1&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
+                <a href="../public/pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=1&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
                   <?php
                 }
                 else{
@@ -161,7 +171,7 @@ while ($reg=mysqli_fetch_array($registros))
                 <?php 
                 if(isset($bloque2)){
                   ?>
-                <a href="../public/pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=2&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
+                <a href="../public/pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=2&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
                   <?php
                 }
                 else{
@@ -200,7 +210,7 @@ while ($reg=mysqli_fetch_array($registros))
    
         <tr>
             <td><?php echo $contador;?></td><td><?php echo utf8_encode($reg['nombre']);?></td><td><?php echo 'Bloque '.$reg['id_bloque'];?></td><td><?php echo $reg['nota'];?></td><td><?php echo $reg['alcance'];?></td>
-			<td><a href="../../pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=3&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-default">Imprimir Nota Bloque</a></td>
+			<td><a href="../../pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=3&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-default">Imprimir Nota Bloque</a></td>
         </tr>
     
     <?php
@@ -212,7 +222,7 @@ while ($reg=mysqli_fetch_array($registros))
                 <?php 
                 if(isset($bloque3)){
                   ?>
-                <a href="../public/pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=3&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
+                <a href="../public/pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=3&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
                   <?php
                 }
                 else{
@@ -250,7 +260,7 @@ while ($reg=mysqli_fetch_array($registros))
             <td><?php echo $contador;?></td>
 			<td><?php echo utf8_encode($reg['nombre']);?></td><td><?php echo 'Bloque '.$reg['id_bloque'];?></td>
 			<td><?php echo $reg['nota'];?></td><td><?php echo $reg['alcance'];?></td>
-			<td><a href="../../pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=4&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-default">Imprimir Nota Bloque</a></td>
+			<td><a href="../../pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=4&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-default">Imprimir Nota Bloque</a></td>
         </tr>
     
     <?php
@@ -262,7 +272,7 @@ while ($reg=mysqli_fetch_array($registros))
                  <?php 
                 if(isset($bloque4)){
                   ?>
-                <a href="../public/pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=4&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
+                <a href="../public/pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=4&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
                   <?php
                 }
                 else{
@@ -301,7 +311,7 @@ while ($reg=mysqli_fetch_array($registros))
 			<td><?php echo utf8_encode($reg['nombre']);?></td>
 			<td><?php echo 'Bloque '.$reg['id_bloque'];?></td>
 			<td><?php echo $reg['nota'];?></td><td><?php echo $reg['alcance'];?></td>
-			<td><a href="../../pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=5&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-default">Imprimir Nota Bloque</a></td>
+			<td><a href="../../pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=5&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-default">Imprimir Nota Bloque</a></td>
         </tr>
     
     <?php
@@ -314,7 +324,7 @@ while ($reg=mysqli_fetch_array($registros))
                 <?php 
                 if(isset($bloque5)){
                   ?>
-                <a href="../public/pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=5&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
+                <a href="../public/pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=5&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
                   <?php
                 }
                 else{
@@ -353,7 +363,7 @@ while ($reg=mysqli_fetch_array($registros))
 			<td><?php echo utf8_encode($reg['nombre']);?></td>
 			<td><?php echo 'Bloque '.$reg['id_bloque'];?></td>
 			<td><?php echo $reg['nota'];?></td><td><?php echo $reg['alcance'];?></td>
-			<td><a href="../../pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=6&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-default">Imprimir Nota Bloque</a></td>
+			<td><a href="../../pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=6&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-default">Imprimir Nota Bloque</a></td>
         </tr>
     
     <?php
@@ -365,7 +375,7 @@ while ($reg=mysqli_fetch_array($registros))
                 <?php 
                 if(isset($bloque6)){
                   ?>
-                <a href="../public/pdf/notas.php?nombretutor=<?php echo $tutor;?>&id_bloque=6&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
+                <a href="../public/pdf/notas.php?modalidad=<?php echo $modalidad;?>&nombretutor=<?php echo $tutor;?>&id_bloque=6&cedula=<?php echo $cedula;?>&nivel=<?php echo $nivel;?>" class="btn btn-info">Imprimir Nota de Bloque 1 existe</a>
                   <?php
                 }
                 else{

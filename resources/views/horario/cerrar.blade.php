@@ -2,7 +2,7 @@
 
 @extends('layouts.plantilla')
 @section('content')
-<div class="col-lg-12 panel">
+<div class="col-lg-12">
         <h5 id="heading">
 
             <?php  
@@ -22,5 +22,7 @@
                 
                 
             </h5>
+            <meta http-equiv="Refresh" content="0;url=notas_bloque">
                 </div>
 @endsection
+

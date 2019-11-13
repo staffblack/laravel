@@ -73,7 +73,7 @@ alert("Editado Satisfactoriamente");
                             <table class="table">
                                 
                                     <tr>
-                                        <th>#</th><th>Fecha</th><th>Nombre</th><th>Foto</th><th>Opciones</th>
+                                        <th>#</th><th>Fecha</th><th>Nombre</th><th>Tipo</th><th>Foto</th><th>Opciones</th>
                                     </tr>
                                 
                                 <tbody>
@@ -82,6 +82,7 @@ alert("Editado Satisfactoriamente");
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->fecha }}</td>
                                         <td>{{ $item->nombre }}</td>
+                                        <td>{{ $item->tipo }}</td>
                                         <td>
                                             <img src="data:image/png;base64,{{ chunk_split(base64_encode($item->foto)) }}" width="50" height="50" />
                                         </td>
